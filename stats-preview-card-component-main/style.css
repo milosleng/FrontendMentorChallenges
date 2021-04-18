@@ -107,7 +107,7 @@ h5 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(154, 18, 179, 0.4);
+  background-color: rgba(128, 18, 179, 0.4);
 
   height: 100%;
   width: 100%;
@@ -124,7 +124,7 @@ img {
 @media (max-width: 768px) {
   .text-content {
     text-align: center;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 0 0 5px 5px;
     order: 2;
     padding: 20px;
   }
@@ -156,8 +156,5 @@ img {
   }
   img {
     border-radius: 5px 5px 0 0;
-  }
-  .text-content {
-    border-radius: 5px 5px;
   }
 }
