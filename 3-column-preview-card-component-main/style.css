@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* font-family: 'Big Shoulders Display', cursive; */
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --white-transparent: hsla(0, 0%, 100%, 0.75);
+  --bg-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Lexend Deca';
+  background-color: var(--white-transparent);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  height: inherit;
+  color: white;
+  min-height: 100%;
+  overflow-y: show;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+
+.card {
+  padding: 2rem;
+  height: 500px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  max-width: 300px;
+}
+
+.card p {
+  color: var(--white-transparent);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2rem;
+}
+
+.card img {
+  height: 50px;
+  width: 80px;
+}
+
+.card:nth-child(1) {
+  background-color: var(--bright-orange);
+  border-radius: 5px 0 0 5px;
+}
+
+.card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 5px 5px 0;
+}
+
+button {
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  max-width: 110px;
+  font-weight: bold;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-sedans {
+  color: var(--bright-orange);
+  font-weight: bold;
+}
+
+.btn-suvs {
+  color: var(--dark-cyan);
+  font-weight: bold;
+}
+.btn-luxury {
+  color: var(--very-dark-cyan);
+  font-weight: bold;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 902px) {
+  .card {
+    margin: 10px;
+  }
+  .attribution {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 616px) {
+  .container {
+    margin-top: 20px;
+  }
+  .card:nth-child(1) {
+    background-color: var(--bright-orange);
+    border-radius: 5px 5px 0 0;
+  }
+
+  .card:nth-child(2) {
+    background-color: var(--dark-cyan);
+    border-radius: 0;
+  }
+
+  .card:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 5px 5px;
+  }
+  .card {
+    margin: 0;
+  }
+}
