@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,200;0,300;0,400;1,100;1,400&family=Ubuntu:ital,wght@0,400;0,500;1,700&display=swap');
+@import './variables';
+
+// flex mixin
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: $direction;
+}
+
+//button styles mixin
+@mixin buttonStyles($color) {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  color: $color;
+  cursor: pointer;
+  outline: none;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  //   font-family: 'Ubuntu', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+//header styles
+
+#header {
+  background: $headerGradient;
+  padding-top: 35px;
+  .header-container {
+    color: $text-header;
+    max-width: 1400px;
+    text-align: center;
+    margin: 0 auto;
+    @include flexCenter(column);
+  }
+  #logo {
+    font-size: $h1;
+    font-weight: bold;
+    margin: 0;
+  }
+  #navbar {
+    @include flexCenter(row);
+    justify-content: space-between;
+    width: 100%;
+    .left-side {
+      @include flexCenter(row);
+      ul {
+        @include flexCenter(row);
+        width: 300px;
+        justify-content: space-around;
+
+        li {
+          list-style-type: none;
+          font-size: 13px;
+          color: $light-white;
+        }
+      }
+    }
+  }
+  .right-side {
+    .login,
+    .sign-up {
+      @include buttonStyles();
+    }
+    :nth-child(1),
+    :nth-child(1):focus {
+      background-color: transparent;
+      outline: none;
+    }
+
+    :nth-child(2),
+    :nth-child(2):focus {
+      color: $light-red;
+      outline: none;
+    }
+  }
+  .header-text {
+    h1 {
+      font-size: $h1;
+      font-weight: 300;
+    }
+    h4 {
+      font-size: 20px;
+      font-weight: 300;
+      color: $light-white;
+    }
+    .header-text-buttons {
+      @include flexCenter();
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: $blue-color;
+  }
+}
